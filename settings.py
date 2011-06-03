@@ -1,5 +1,10 @@
 # Django settings for calaws project.
 
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
+TEMPLATE_CONTEXT_PROCESSORS += (
+    'django.core.context_processors.request',
+)
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -23,7 +28,8 @@ DATABASES = {
 import os
 PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 SPHINX_API_VERSION = 0x116
-#These are set when searchd is run from commandline
+
+#Set these from the command line when running searchd
 #SPHINX_CONF_PATH = '/usr/local/etc/sphinx_calaw.conf'
 #SPHINX_INDEX = '/usr/local/sphinx/var/data'
 
@@ -50,9 +56,12 @@ USE_I18N = True
 # calendars according to the current locale
 USE_L10N = True
 
+# Grabs absolute path to the directory containing the current file
+SETTINGS_ROOT = os.path.abspath(os.path.dirname(__file__))
+
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = '/path/to/root/'
+MEDIA_ROOT = SETTINGS_ROOT+ "site_media/" 
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -90,7 +99,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-#SECRET_KEY = ''
+SECRET_KEY = '9d(=shg84zcaa_&!(o6m#%za_$zg1(fgoozqf0z%0x19+-1ggb'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -113,8 +122,8 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '/path/to/calaw/templates',
-    '/path/to/calaw/templates/tocs'
+    '/Users/tabulaw/Documents/workspace/calaw/templates',
+    '/Users/tabulaw/Documents/workspace/calaw/templates/tocs'
 )
 
 INSTALLED_APPS = (
@@ -130,6 +139,7 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'django.contrib.databrowse',
     'djangosphinx',
+    'endless_pagination',
     'laws',
 )
 
