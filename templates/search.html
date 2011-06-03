@@ -1,0 +1,29 @@
+{% extends 'base_search.html' %}
+{% block search %}
+    <div id="search_main">
+        {% autoescape on %} 
+            <div style="padding:5px; border-bottom:1px dashed gray; margin-bottom:20px;">
+                <h1>Search:</h1>
+                <form method="post" id="id_search_form" onsubmit="if ($('#id_query').val()=='Search...') {return false;}">{% csrf_token %}
+                    {{ searchform.query }} {{ searchform.query.errors }}  
+                    <input type="hidden" name="page" value = "1" id="id_page"/> <input type="submit" value="Search CA Laws" class="right_btn find_btn" style="width:100px;"/>  
+                </form>
+                <p><span style="text-decoration:underline">Total # of results:</span>&nbsp;{{total}}</p>
+            </div>
+        {% endautoescape %}
+    </div>
+{% endblock search %}
+{% block content %}
+    <div id="results_main">
+        <h4>{% if total > 20 %}TOP 20 RESULTS:{% endif %}</h4>
+        {% for sectionfile, rpassage in rpassages %}
+            <div class="list_item pointer" id="item-{{ sectionfile.id }}" onclick="location.href='/laws/target/CODE-{{sectionfile.code}}-{{sectionfile}}';">
+	           <a href="/laws/target/CODE-{{sectionfile.code}}-{{sectionfile}}" class="sec">{{sectionfile.code.fullname}}, Sections: {{ sectionfile }}</a>
+               <div style="margin-top:5px; margin-bottom:30px; text-indent:50px;">{{rpassage|safe}}
+            </div>
+        {% empty %}
+            <p>No results found.</p>
+        {% endfor %}
+       <!-- {% include "paginator.html" %} -->
+    </div>
+{% endblock content %}

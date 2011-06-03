@@ -1,0 +1,16 @@
+{% if searchform %}
+<div class="left" style="margin-bottom:20px; position: absolute; left: 500px;">
+  <form method="post" action="/search" id="id_search_form" onSubmit="if ($('#id_query').val()=='{{ searchform.query.label }}') {return false;}">{% csrf_token %}
+    <div class="left">    
+      {{ searchform.query }}
+<!-- {{ searchform.query.errors }} -->  
+    </div>
+    <div class="left" style="padding-top:5px;">
+      <div class="left">
+	<input type="submit" value="Search CA Laws" class="right_btn find_btn" style="width:100px;" />  
+      </div>
+      <input type="hidden" name="page" value = "1" id="id_page"/>
+    </div>
+  </form>
+</div>
+{% endif %}
