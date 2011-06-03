@@ -50,6 +50,9 @@ urlpatterns = patterns('',
     # Search page and results
        (r'^searchtest/?$', 'laws.views.search2'),
     
+    # Robots directive
+    url(r'^robots.txt$', 'direct_to_template', {'template': 'robots.txt'}, name='robots.txt'),
+    
     # Default to the index
        (r'^', 'laws.views.codes_index'),
 )
