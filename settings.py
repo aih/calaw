@@ -52,7 +52,7 @@ USE_L10N = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = '/Users/tabulaw/Documents/calaw/static/'
+MEDIA_ROOT = '/path/to/root/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -90,7 +90,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '9d(=shg84zcaa_&!(o6m#%za_$zg1(fgoozqf0z%0x19+-1ggb'
+#SECRET_KEY = ''
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -113,8 +113,8 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '/Users/tabulaw/Documents/workspace/calaw/templates',
-    '/Users/tabulaw/Documents/workspace/calaw/templates/tocs'
+    '/path/to/calaw/templates',
+    '/path/to/calaw/templates/tocs'
 )
 
 INSTALLED_APPS = (
