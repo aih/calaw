@@ -1,16 +1,17 @@
-# Django settings for calaw project.
+# Django settings for calaws project.
 
-from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
-TEMPLATE_CONTEXT_PROCESSORS += (
-    'django.core.context_processors.request',
-    'django.core.context_processors.media',
-)
-
-DEBUG = True 
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+from django.conf.global_settings import
+
+TEMPLATE_CONTEXT_PROCESSORS
+TEMPLATE_CONTEXT_PROCESSORS += (
+    'django.core.context_processors.request',
+)
+
 ADMINS = (
-     ('Ari Hershowitz', 'aih@tabulaw.com'),
+     ('yourname', 'youremail@example.com'),
 )
 
 MANAGERS = ADMINS
@@ -18,7 +19,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': './sqlite3.sql',                      # Or path to database file if using sqlite3.
+        'NAME': '',                      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -29,8 +30,7 @@ DATABASES = {
 import os
 PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 SPHINX_API_VERSION = 0x116
-
-#Set these from the command line when running searchd
+#These are set when searchd is run from commandline
 #SPHINX_CONF_PATH = '/usr/local/etc/sphinx_calaw.conf'
 #SPHINX_INDEX = '/usr/local/sphinx/var/data'
 
@@ -57,17 +57,14 @@ USE_I18N = True
 # calendars according to the current locale
 USE_L10N = True
 
-# Grabs absolute path to the directory containing the current file
-SETTINGS_ROOT = os.path.abspath(os.path.dirname(__file__))
-
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = SETTINGS_ROOT+ "/site_media/" 
+MEDIA_ROOT = '/path/to/root/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = "site_media/" 
+MEDIA_URL = '/media/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -100,7 +97,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '9d(=shg84zcaa_&!(o6m#%za_$zg1(fgoozqf0z%0x19+-1ggb'
+#SECRET_KEY = ''
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -123,8 +120,8 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '/Users/tabulaw/Documents/workspace/calaw/templates',
-    '/Users/tabulaw/Documents/workspace/calaw/templates/tocs'
+    '/path/to/calaw/templates',
+    '/path/to/calaw/templates/tocs'
 )
 
 INSTALLED_APPS = (
@@ -140,7 +137,7 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'django.contrib.databrowse',
     'djangosphinx',
-    'endless_pagination',
+    'endless_pagination'
     'laws',
 )
 

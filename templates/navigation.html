@@ -1,0 +1,16 @@
+{% load base_extras %}
+
+<div id="topbar">
+    <div class="navbar">
+        <div class="navbar-side navbar-left"></div>
+        <div class="navbar-content">
+     <!!-   {% if user.is_authenticated %}  {% endif %} -->
+            <a class="{% navactive request 'codes_toc' %}"
+                href="{% url codes_toc %}">CA Codes</a>
+            <a class="{% navactive request 'search' %}" 
+                href="{% url search %}">Search</a>
+        </div>
+        <div class="navbar-side navbar-right"></div>
+    </div>
+</div>
+

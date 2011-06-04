@@ -1,4 +1,7 @@
-{% extends 'base_search.html' %}
+{% extends 'base.html' %}
+{% block navigation %}
+    {% include navigation.html %}
+{% endblock navigation %}
 {% block search %}
     <div id="search_main">
         {% autoescape on %} 

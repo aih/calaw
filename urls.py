@@ -27,32 +27,33 @@ urlpatterns = patterns('',
     # (r'^calaw/', include('calaw.foo.urls')),
     
     # Target urls:
-      (r'^laws/target/.*?', 'laws.views.target_remove'),
+      url(r'^laws/target/.*?', 'laws.views.target_remove'),
 
     # Statutes:
-      (r'^laws/CODE-(?P<codename>[a-z]{3,4})-(?P<target_section>[0-9.]*)/?', 'laws.views.target_to_section'),
+      url(r'^laws/CODE-(?P<codename>[a-z]{3,4})-(?P<target_section>[0-9.]*)/?', 'laws.views.target_to_section', name='section'),
 
     # Code tables of contents:
-      (r'^laws/C(?:ODE|ode)-(?P<codename>[a-z]{3,4})/?', 'laws.views.code_toc'),
+      url(r'^laws/C(?:ODE|ode)-(?P<codename>[a-z]{3,4})/?', 'laws.views.code_toc', name='code_toc'),
 
     # Enamble admin documentation:
       (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Enable the admin:
-      (r'^admin/', include(admin.site.urls)),
+      url(r'^admin/', include(admin.site.urls), name='admin'),
     
     # Allow browsing of the data
     #  (r'^databrowse/(.*)', 'databrowse.site.root'),
 
     # Search page and results
-       (r'^search/?$', 'laws.views.search'),
+       url(r'^search/?$', 'laws.views.search', name='search'),
 
-    # Search page and results
-       (r'^searchtest/?$', 'laws.views.search2'),
-    
     # Robots directive
     url(r'^robots.txt$', 'direct_to_template', {'template': 'robots.txt'}, name='robots.txt'),
     
     # Default to the index
-       (r'^', 'laws.views.codes_index'),
+    url(r'^$', 'laws.views.codes_index', name='codes_toc'),
 )
+
+if settings.DEBUG: # Serve static files in debug.
+    urlpatterns += patterns('', (r'^site_media/(.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT, 'show_indexes' : True}), )
+
