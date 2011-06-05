@@ -2,9 +2,17 @@
 
 <div id="topbar">
     <div class="navbar">
-        <div class="navbar-side navbar-left"></div>
+        <div class="navbar-side navbar-left">
+            {% comment %}Breadcrumbs to place in code hierarchy{% endcomment %}
+            <a class="{% navactive request 'codes_toc' %}"
+                href="{% url codes_toc %}">CA Codes</a>
+            {% if code  %}
+            <a class="{% navactive request 'code' %}"
+                href="{% url code %}">{{ code.fullname  }}</a>
+            {% endif %}
+        </div>
         <div class="navbar-content">
-     <!!-   {% if user.is_authenticated %}  {% endif %} -->
+           {% comment %}    {% if user.is_authenticated %}  {% endif %}  {% endcomment  %}
             <a class="{% navactive request 'codes_toc' %}"
                 href="{% url codes_toc %}">CA Codes</a>
             <a class="{% navactive request 'search' %}" 

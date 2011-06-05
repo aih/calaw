@@ -11,6 +11,9 @@ from laws.models import SectionFile, SearchForm
 from utils.searchtext import searchtext_sphinx, searchtext_FTS4
 from utils.utils import *
 from operator import itemgetter
+from lxml import html, etree
+from lxml.cssselect import CSSSelector as cs
+
 
 def target_remove(request):
         current_url = request.get_full_path()
@@ -42,10 +45,18 @@ def codes_index(request):
     response = render_to_response('codelist.html', locals(), context_instance=RequestContext(request))
     return response
 
+path = '/Users/tabulaw/Documents/workspace/calaw/'
+@render_to("code_toc.html")
 def code_toc(request, codename):
     searchform = SearchForm(request.POST)
-    response = render_to_response(codename+'_toc.html', locals(), context_instance=RequestContext(request))
-    return response
+    code_toc = open(path+'templates/'+ 'tocs/' + codename + '_toc.html')
+    tree_toc = html.document_fromstring(code_toc.read())
+    code_toc.close()
+    bodysel = cs('body')
+    body = etree.tostring(bodysel(tree_toc)[0], pretty_print=False, method='html') # selects the body element of the document
+    print body
+    #response = render_to_response(codename+'_toc.html', locals(), context_instance=RequestContext(request))
+    return locals() 
 
 def my404(request):
     """

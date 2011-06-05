@@ -15,9 +15,9 @@ from laws.models import Code, SectionFile, Section
 #databrowse.site.register(SectionFile)
 #databrowse.site.register(Section)
 
-admin.site.register(Code)
-admin.site.register(SectionFile)
-admin.site.register(Section)
+#admin.site.register(Code)
+#admin.site.register(SectionFile)
+#admin.site.register(Section)
 
 
 handler404 = 'calaw.laws.views.my404'
