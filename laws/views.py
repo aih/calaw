@@ -13,7 +13,7 @@ from utils.utils import *
 from operator import itemgetter
 from lxml import html, etree
 from lxml.cssselect import CSSSelector as cs
-
+import settings
 
 def target_remove(request):
         current_url = request.get_full_path()
@@ -45,13 +45,12 @@ def codes_index(request):
     response = render_to_response('codelist.html', locals(), context_instance=RequestContext(request))
     return response
 
-path = '/Users/tabulaw/Documents/workspace/calaw/'
 @render_to("code_toc.html")
 def code_toc(request, codename):
     searchform = SearchForm(request.POST)
     code_current = models.Code.objects.get(name = codename)
     code_fn = code_current.fullname
-    code_toc = open(path+'templates/'+ 'tocs/' + codename + '_toc.html')
+    code_toc = open(settings.PROJECT_PATH +'/templates/'+ 'tocs/' + codename + '_toc.html')
     tree_toc = html.document_fromstring(code_toc.read())
     code_toc.close()
     bodysel = cs('body')
