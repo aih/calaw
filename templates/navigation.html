@@ -10,7 +10,7 @@
                 href="{% url codes_toc %}">CA Codes</a>
             {% comment %}TODO: Remove the hardcoded CSS and pass styling through the View{% endcomment %}
             {% if code_fn %} &nbsp;&nbsp;>> &nbsp;&nbsp;<a class="" style="font-weight: bold"
-               href="">{{ code_fn }}</a>
+                href="/laws/CODE-{{code_current}}">{{ code_fn }}</a>
            {% endif %}
            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a class="{% navactive request 'search' %}" 
                 href="{% url search %}">Search</a>

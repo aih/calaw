@@ -14,12 +14,15 @@ from operator import itemgetter
 from lxml import html, etree
 from lxml.cssselect import CSSSelector as cs
 import settings
+            
+bodysel = cs('body')
 
 def target_remove(request):
         current_url = request.get_full_path()
         new_url = current_url.replace('target/','')
         return HttpResponseRedirect(new_url)
 
+@render_to("code_display.html")
 def target_to_section(request, codename, target_section):
         if codename == 'this':
             current_url = request.META['HTTP_REFERER']            
@@ -33,19 +36,21 @@ def target_to_section(request, codename, target_section):
             return HttpResponseRedirect(new_url)
         else:
             code_current = models.Code.objects.get(name = codename)
-            print code_current
+            code_fn = code_current.fullname
             target_section = target_section.rsplit('.',1)[0]+'.'
             section_current = models.Section.objects.get(code = code_current, secnumber = target_section)
             #print section_current
             sectionfile = models.SectionFile.objects.get(section = section_current)
-            return HttpResponse(sectionfile.text)
+            tree_section = html.document_fromstring(sectionfile.text)
+            body = etree.tostring(bodysel(tree_section)[0], pretty_print=False, method='html') # selects the body element of the document
+            return locals()
 
 def codes_index(request):
     searchform = SearchForm(request.POST)
     response = render_to_response('codelist.html', locals(), context_instance=RequestContext(request))
     return response
 
-@render_to("code_toc.html")
+@render_to("code_display.html")
 def code_toc(request, codename):
     searchform = SearchForm(request.POST)
     code_current = models.Code.objects.get(name = codename)
@@ -53,7 +58,6 @@ def code_toc(request, codename):
     code_toc = open(settings.PROJECT_PATH +'/templates/'+ 'tocs/' + codename + '_toc.html')
     tree_toc = html.document_fromstring(code_toc.read())
     code_toc.close()
-    bodysel = cs('body')
     body = etree.tostring(bodysel(tree_toc)[0], pretty_print=False, method='html') # selects the body element of the document
     #response = render_to_response(codename+'_toc.html', locals(), context_instance=RequestContext(request))
     return locals() 
