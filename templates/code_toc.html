@@ -1,4 +1,7 @@
     {% extends 'base.html' %}
+    {% block navbar %}
+        {% include 'navigation.html' %}    
+    {% endblock navbar %}
     {%  block content %}
         {{ body|safe }}
     {%  endblock content %}

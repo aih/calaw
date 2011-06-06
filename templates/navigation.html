@@ -3,19 +3,16 @@
 <div id="topbar">
     <div class="navbar">
         <div class="navbar-side navbar-left">
-            {% comment %}Breadcrumbs to place in code hierarchy{% endcomment %}
-            <a class="{% navactive request 'codes_toc' %}"
-                href="{% url codes_toc %}">CA Codes</a>
-            {% if code  %}
-            <a class="{% navactive request 'code' %}"
-                href="{% url code %}">{{ code.fullname  }}</a>
-            {% endif %}
         </div>
         <div class="navbar-content">
            {% comment %}    {% if user.is_authenticated %}  {% endif %}  {% endcomment  %}
             <a class="{% navactive request 'codes_toc' %}"
                 href="{% url codes_toc %}">CA Codes</a>
-            <a class="{% navactive request 'search' %}" 
+            {% comment %}TODO: Remove the hardcoded CSS and pass styling through the View{% endcomment %}
+            {% if code_fn %} &nbsp;&nbsp;>> &nbsp;&nbsp;<a class="" style="font-weight: bold"
+               href="">{{ code_fn }}</a>
+           {% endif %}
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a class="{% navactive request 'search' %}" 
                 href="{% url search %}">Search</a>
         </div>
         <div class="navbar-side navbar-right"></div>

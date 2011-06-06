@@ -49,12 +49,13 @@ path = '/Users/tabulaw/Documents/workspace/calaw/'
 @render_to("code_toc.html")
 def code_toc(request, codename):
     searchform = SearchForm(request.POST)
+    code_current = models.Code.objects.get(name = codename)
+    code_fn = code_current.fullname
     code_toc = open(path+'templates/'+ 'tocs/' + codename + '_toc.html')
     tree_toc = html.document_fromstring(code_toc.read())
     code_toc.close()
     bodysel = cs('body')
     body = etree.tostring(bodysel(tree_toc)[0], pretty_print=False, method='html') # selects the body element of the document
-    print body
     #response = render_to_response(codename+'_toc.html', locals(), context_instance=RequestContext(request))
     return locals() 
 
