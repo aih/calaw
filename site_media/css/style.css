@@ -1,3 +1,10 @@
 .navbar .active {
     font-weight: bold;
 }
+
+#topbar {
+    position: fixed;
+    left: 50px;
+    top: 8px;
+    background-color: whitesmoke;
+}
