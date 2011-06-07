@@ -2,6 +2,9 @@
     font-weight: bold;
 }
 
+.section {
+    font-weight: bold;
+}
 #topbar {
     position: fixed;
     left: 50px;
