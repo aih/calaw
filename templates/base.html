@@ -1,15 +1,19 @@
+{% load django_static %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>{% block title %}CA Law{% endblock %}</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        {% slimall %}
         <link rel="stylesheet" type="text/css" media="all" href="{{ MEDIA_URL }}css/reset.css" />
         <link rel="stylesheet" type="text/css" media="all" href="{{ MEDIA_URL }}css/typography.css" />
         <link rel="stylesheet" type="text/css" media="all" href="{{ MEDIA_URL }}css/style.css" />
-        <link href="{{ MEDIA_URL }}img/favicon.png" rel='shortcut icon' /> 
-        <link href="{{ MEDIA_URL }}img/favicon.png" rel='icon' /> 
+        {% comment %} <link href="{{ MEDIA_URL }}img/favicon.png" rel='shortcut icon' /> 
+        <link href="{{ MEDIA_URL }}img/favicon.png" rel='icon' />
+        {% endcomment %}
         <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-1.4.4.min.js"></script>
+        {% endslimall %}
         {% block extrahead %}
         {% endblock %}
     </head>

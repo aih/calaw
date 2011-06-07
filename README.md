@@ -17,4 +17,10 @@ $ search -c /path/to/sphinx_calaw.conf -i calaw1
 
 To run the searchd daemon:
 sudo nohup searchd --config /usr/local/etc/sphinx_calaw.conf --index calaw1 &
+-------------
+Dependencies:
 
+####In Production:
+easy_install django-static
+Follow these instructions for serving static files:
+http://www.peterbe.com/plog/serve-your-static-stuff-in-django-with-nginx
