@@ -54,6 +54,14 @@ class SectionFileIndex(models.Model):
     class Meta:
         db_table = 'calaw1'
 
+class SectionFileName(models.Model):
+    name = models.CharField(max_length=255)
+    parents = models.CharField(max_length=255)
+    sectionfile = models.ForeignKey('SectionFile')
+
+    def __unicode__(self):
+        return self.parents #self.name
+
 class SearchForm(forms.Form):
     query = forms.CharField(max_length=100, widget=forms.TextInput(attrs={"class":"right_btn", "onfocus":"$('#id_query').css('background','none'); var q=$('#id_query').val(); if (q=='Search...') {$('#id_query').val(''); $('#id_query').css('font-weight','bolder');}","onblur":"var q=$('#id_query').val(); \r\n if (q=='') {$('#id_query').val('Search...'); $('#id_query').css('font-weight','normal'); $('#id_query').css('background', 'transparent url(/site_media/img/icons/magnifier.png) no-repeat scroll right center'); } "}), initial="Search...", label="Search...")
     page = forms.IntegerField(widget=forms.HiddenInput())
