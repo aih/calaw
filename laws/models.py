@@ -23,7 +23,8 @@ class SectionFile(models.Model):
     code = models.ForeignKey('Code')
     text = models.TextField(null=True, blank=True)
     url = models.CharField(max_length=255)
-
+    sectionfilename = models.ForeignKey('SectionFileName', blank=True, null=True, on_delete=models.SET_NULL)
+    
     def __unicode__(self):
         return self.sectionfile #self.sectionfile
 
@@ -57,7 +58,6 @@ class SectionFileIndex(models.Model):
 class SectionFileName(models.Model):
     name = models.CharField(max_length=255)
     parents = models.CharField(max_length=255)
-    sectionfile = models.ForeignKey('SectionFile')
 
     def __unicode__(self):
         return self.parents #self.name

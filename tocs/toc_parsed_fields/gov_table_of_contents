@@ -77,7 +77,7 @@
 @      CHAPTER@4.@PROCEDURES APPLICABLE TO STATE AND LOCAL PUBLIC ENTITIES @985@
 @     PART@6.@INSURANCE @989@-991.2
 @     PART@7.@DEFENSE OF PUBLIC EMPLOYEES @995@-996.6
-@     PART@8.@SAN FRANCISCO-OAKLAND BAY BRIDGE AND I-@880@ CYPRESS STRUCTURE DISASTER RELIEF ............................. 997-997.6
+@     PART@8.@SAN FRANCISCO-OAKLAND BAY BRIDGE AND I-880 CYPRESS STRUCTURE DISASTER RELIEF @997@-997.6
 @     PART@9.@LAKE DAVIS NORTHERN PIKE ERADICATION PROJECT RELIEF ACCOUNT @998@-998.3
 @    DIVISION@4.@PUBLIC OFFICERS AND EMPLOYEES@@
 @     CHAPTER@1.@GENERAL@@
@@ -169,7 +169,7 @@
 @     CHAPTER@8.@PURCHASES @4475@-4482
 @     CHAPTER@9.@RAPID TRANSIT @4500@
 @     CHAPTER@10.@CONTRACTS WITH PRIVATE ARCHITECTS, ENGINEERING, LAND SURVEYING, AND CONSTRUCTION PROJECT MANAGEMENT FIRMS @4525@-4529.5
-     CHAPTER 10.1.  [ARCHITECTURAL AND ENGINEERING SERVICES] .. 4529.10-4529.20
+@     CHAPTER@10.1.@[ARCHITECTURAL AND ENGINEERING SERVICES] @4529.10@-4529.20
 @     CHAPTER@10.5.@TARGET AREA CONTRACT PREFERENCE ACT @4530@-4535.3
 @     CHAPTER@11.@ANTITRUST CLAIMS @4550@-4554
 @     CHAPTER@12.@CHILD CARE FACILITIES FOR STATE EMPLOYEES @4560@-4563
@@ -269,7 +269,7 @@
 @     CHAPTER@22.5.@CALIFORNIA TAXPAYERS' RIGHT TO CUSTOMER SERVICE @7528@-7528.1
 @     CHAPTER@23.@PUBLIC AGENCY NAME REFORM @7530@
 @     CHAPTER@24.@DOCUMENTS AND WRITTEN REPORTS @7550@-7550.6
-@     CHAPTER@25.@COMMEMORATIVE @@"CALIFORNIA GOLD" MEDALLIONS ........ 7551-7556
+@     CHAPTER@25.@COMMEMORATIVE "CALIFORNIA GOLD" MEDALLIONS @7551@-7556
 @     CHAPTER@26.@FEDERAL FUNDING @7560@-7564
 @     CHAPTER@26.5.@INTERAGENCY RESPONSIBILITIES FOR PROVIDING SERVICES TO CHILDREN WITH DISABILITIES @7570@-7588
 @     CHAPTER@28.@OLYMPIC TRAINING CENTER @7591@-7592
@@ -418,11 +418,11 @@
 @      Article@3.@Fiscal Provisions @8879.5@-8879.16
 @     CHAPTER@12.49.@THE HIGHWAY SAFETY, TRAFFIC REDUCTION, AIR QUALITY, AND PORT SECURITY BOND ACT OF 2006@@
 @      Article@1.@General Provisions @8879.20@-8879.22
-@      Article@2.@Highway Safety, Traffic Reduction, Air Quality, and Port Security Fund of 2006@@and Program .......... 8879.23
+@      Article@2.@Highway Safety, Traffic Reduction, Air Quality, and Port Security Fund of 2006 and Program @8879.23@
 @      Article@3.@Fiscal Provisions @8879.25@-8879.37
 @     CHAPTER@12.491.@IMPLEMENTATION OF THE HIGHWAY SAFETY, TRAFFIC REDUCTION, AIR QUALITY, AND PORT SECURITY BOND ACT OF 2006@@
 @      Article@1.@General Provisions @8879.50@-8879.501
-@      Article@2.@State Route @99@ Account .............................. 8879.51
+@      Article@2.@State Route 99 Account @8879.51@
 @      Article@2.5.@Trade Corridors Improvement Fund @8879.52@
 @      Article@3.@Port and Maritime Security Account @8879.53@
 @      Article@4.@Transportation Facilities Account @8879.54@
@@ -453,7 +453,7 @@
 @      Article@1.@General Provisions and Legislative Findings @8897@
 @      Article@2.@Earthquake Evaluations @8897.1@-8897.5
 @     CHAPTER@14.@EARTHQUAKE RESEARCH EVALUATION CONFERENCE AND FIVE-YEAR STATEWIDE RESEARCH PLAN @8899.10@-8899.15
-@      Article@2.@Alfred E@@. Alquist Earthquake Act ............ 8899.18-8899.24
+@      Article@2.@Alfred E. Alquist Earthquake Act @8899.18@-8899.24
 @    DIVISION@2.@LEGISLATIVE DEPARTMENT@@
 @     PART@1.@LEGISLATURE@@
 @      CHAPTER@1.@LEGISLATIVE ORGANIZATION@@
@@ -548,8 +548,7 @@
 @       Article@1.@General @11340@-11342.4
 @       Article@2.@Definitions @11342.510@-11342.610
 @       Article@3.@Filing and Publication @11343@-11343.8
-@       Article@4.@The California Code of Regulations, the California Code of Regulations Supplement, and the California Regulatory Notice@@
-                   Register ....................................... 11344-11345
+@       Article@4.@The California Code of Regulations, the California Code of Regulations Supplement, and the California Regulatory Notice Register @11344@-11345
 @       Article@5.@Public Participation: Procedure for Adoption of Regulations @11346@-11348
 @       Article@6.@Review of Proposed Regulations @11349@-11349.6
 @       Article@7.@Review of Existing Regulations @11349.7@-11349.9
@@ -631,7 +630,8 @@
 @       Article@3.@Business Programs @12180@-12197
 @       Article@4.@State Archives @12220@-12237
 @       Article@5.@Roster of Public Officials @12240@-12241
-@       Article@6.@Reinstatement of Business Entities @12260@-12263 [Article 6.5.  Violations of the Public's Right to Know Act] ....  12269
+@       Article@6.@Reinstatement of Business Entities @12260@-12263 
+@       [Article@6.5.@Violations of the Public's Right to Know Act] @12269@
 @      CHAPTER@4.@TREASURER@@
 @       Article@1.@General @12302@-12305
 @       Article@2.@Duties @12320@-12333
@@ -760,7 +760,8 @@
 @       Article@2.6.@Small Business Technical Assistance Act of 2008@14137@-14137.4
 @       Article@3.@Contracts for Services With the United States @14150@-14155
 @       Article@4.@Guaranteed Return Trip Demonstration Project @14170@-14181
-@      CHAPTER@3.@STATE EMPLOYEE TELECOMMUTING PROGRAM @14200@-14203 [CHAPTER 3.  PUBLIC WORKS] ................................ 14254.5-14310
+@      CHAPTER@3.@STATE EMPLOYEE TELECOMMUTING PROGRAM @14200@-14203
+@      [CHAPTER@3.@PUBLIC WORKS] @14254.5@-14310
 @      CHAPTER@4.@CALIFORNIA TRANSPORTATION RESEARCH AND INNOVATION PROGRAM @14450@-14456
 @     PART@5.3.@CALIFORNIA TRANSPORTATION COMMISSION@@
 @      CHAPTER@1.@GENERAL @14500@-14515
@@ -1136,8 +1137,7 @@
 @      CHAPTER@7.5.@STATE EMPLOYEE ASSISTANCE PROGRAM@@
 @      CHAPTER@8.@TWO-TIERED RETIREMENT SYSTEM @19999@-19999.1
 @      CHAPTER@8.5.@RETIREMENT PLAN FOR EMPLOYEES EXCLUDED FROM THE PUBLIC EMPLOYEES' RETIREMENT SYSTEM @19999.2@-19999.21
-@      CHAPTER@8.6.@ALTERNATE RETIREMENT PROGRAM FOR NEW EMPLOYEES EXEMPTED FROM CONTRIBUTIONS TO THE PUBLIC EMPLOYEES' RETIREMENT@@
-                    SYSTEM ................................... 19999.3-19999.31
+@      CHAPTER@8.6.@ALTERNATE RETIREMENT PROGRAM FOR NEW EMPLOYEES EXEMPTED FROM CONTRIBUTIONS TO THE PUBLIC EMPLOYEES' RETIREMENT SYSTEM @19999.3@-19999.31
 @      CHAPTER@9.@TAX-DEFERRED SAVINGS PLANS @19999.5@
 @      CHAPTER@10.@ANNUITY CONTRACTS @19999.7@
 @     PART@3.@PUBLIC EMPLOYEES' RETIREMENT SYSTEM@@
@@ -1207,7 +1207,7 @@
 @      CHAPTER@14.@DEATH BENEFITS@@
 @       Article@1.@General Provisions @21490@-21510
 @       Article@2.@Preretirement Death Benefits @21530@-21554
-@       Article@3.@Preretirement 1959@@Survivor Allowance .......... 21570-21583
+@       Article@3.@Preretirement 1959 Survivor Allowance @21570@-21583
 @       Article@4.@Preretirement Group Term Life Insurance @21600@-21605
 @       Article@5.@Postretirement Death Benefits @21620@-21635.5
 @      CHAPTER@15.@LONG-TERM CARE @21660@-21664
@@ -1226,7 +1226,7 @@
 @      CHAPTER@3.@ADMINISTRATION OF OLD AGE AND SURVIVORS' INSURANCE PROGRAM@@
 @       Article@1.@General Administration Provisions @22500@-22503
 @       Article@2.@Administrative Cost Assessment and Financial Obligations @22550@-22560
-       Article 3.  O.A.S.I. Revolving Fund ........................ 22600-22603
+@       Article@3.@O.A.S.I. Revolving Fund @22600@-22603
 @     PART@5.@THE PUBLIC EMPLOYEES' MEDICAL AND HOSPITAL CARE ACT@@
 @      CHAPTER@1.@PUBLIC EMPLOYEES'HEALTH BENEFITS@@
 @       Article@1.@General Provisions @22750@-22755
@@ -1420,7 +1420,7 @@
 @      CHAPTER@2.@SHERIFF@@
 @       Article@1.@Duties @26600@-26616
 @       Article@1.1.@Sheriff as Ex Officio Director of Emergency Services @26620@-26624
-@       Article@1.2.@Contra Costa County Marshal@@/Sheriff Consolidation .............................. 26625-26625.9
+@       Article@1.2.@Contra Costa County Marshal/Sheriff Consolidation @26625@-26625.9
 @       Article@1.7.@Sacramento County Sheriff-Marshal Consolidation @26638.1@-26638.12
 @       Article@1.75.@Merced County Court Security Division @26638.15@
 @       Article@1.8.@Sheriff-Marshal Consolidation @26639@-26639.3
@@ -1532,14 +1532,14 @@
 @      CHAPTER@1.@GENERAL @31200@-31208
 @      CHAPTER@3.@COUNTY EMPLOYEES RETIREMENT LAW OF 1937@@
 @       Article@1.@General @31450@-31485.17
-@       Article@1.4.@Alternative Plan for Counties of the @16@th Class ..................................... 31486-31486.12
+@       Article@1.4.@Alternative Plan for Counties of the 16th Class @31486@-31486.12
 @       Article@1.5.@Alternative Plan for Counties with Populations in Excess of Six Million @31487@-31495.6
-@       Article@1.6.@Alternative Plan for Counties of the @10@th Class ...................................... 31496-31498.7
-@       Article@1.7.@Alternative Plan for Counties of the @25@th Class ...................................... 31499-31499.9
-@       Article@1.8.@Alternative Optional, Integrated, Noncontributory Plan for Counties of the @20@th Class ...................... 31499.10-31499.19
+@       Article@1.6.@Alternative Plan for Counties of the 10th Class @31496@-31498.7
+@       Article@1.7.@Alternative Plan for Counties of the 25th Class @31499@-31499.9
+@       Article@1.8.@Alternative Optional, Integrated, Noncontributory Plan for Counties of the 20th Class @31499.10@-31499.19
 @       Article@2.@Establishment of System @31500@-31509
 @       Article@2.1.@Additional Plan for Counties of the First Class @31510@-31510.4
-@       Article@2.6.@Alternative Plan for Counties of the @13@th Class ..................................... 31511-31511.11
+@       Article@2.6.@Alternative Plan for Counties of the 13th Class @31511@-31511.11
 @       Article@2.7.@General Limitations @31515@-31517
 @       Article@3.@Retirement Board @31520@-31539
 @       Article@4.@Membership @31550@-31567
@@ -1571,7 +1571,7 @@
 @       Article@16.5.@Cost of Living Adjustment @31870@-31874.6
 @       Article@16.6.@Retrospective Cost-of-Living Adjustment @31875@-31879.2
 @       Article@17.@Integration with Federal Old Age, Survivors, and Disability Insurance @31880@-31894
-@       Article@17.5.@Termination of Social Security in Counties with a Population Exceeding @6@,000,000 ............................... 31894.1-31894.3
+@       Article@17.5.@Termination of Social Security in Counties with a Population Exceeding 6,000,000 @31894.1@-31894.3
 @       Article@18.@Adjustment to Fit Other Allowances @31895@-31898
 @      CHAPTER@3.9.@INTERNAL REVENUE CODE COUNTY COMPLIANCE AND REPLACEMENT BENEFITS PROGRAM @31899@-31899.9
 @      CHAPTER@4.@COUNTY PEACE OFFICERS RETIREMENT LAW@@
@@ -1921,7 +1921,7 @@
 @       Article@4.@Capital Outlay Fund @53730.5@-53737
 @       Article@4.3.@Local Levies @53739@
 @       Article@4.5.@Tort Liability Fund @53740@-53747
-@       Article@4.6.@Proposition @218@ Omnibus Implementation Act ... 53750-53756
+@       Article@4.6.@Proposition 218 Omnibus Implementation Act @53750@-53756
 @       Article@5.@Bankruptcy @53760@
 @       Article@6.@Exceeding the Budget @53790@-53792
 @       Article@6.5.@Building Certificates @53800@-53814
@@ -2400,20 +2400,20 @@
 @     Article@8.@Officers, Attaches, and Employees Generally @69893.7@-69917
 @     Article@8.5.@Superior Court Security @69920@-69927
 @     Article@9.@Official Reporters Generally @69941@-69958
-@     Article@10.@Official Reporters in Counties With a Population of @70@,000 to 100,000 ............................ 69990-69991
-@     Article@10.1.@Official Reporters in Counties with a Population of @750@,000 to 1,070,000 .......... 69992-69992.2
-@     Article@10.2.@Official Reporters in Counties With a Population of @240@,000 to 260,000 ..............................  69993
-@     Article@10.3.@Official Reporters in Counties With a Population of @490@,000 to 503,000 ............ 69994-69994.9
-@     Article@10.4.@Official Reporters and Fees in Counties With a Population of @375@,000 to 400,000 .............. 69995-69999
-@     Article@10.5.@Official Reporters in Counties with a Population of @10@,000 to 10,500 ................................  70000
-@     Article@10.6.@Official Reporters in Counties With a Population of @210@,000 to 220,000 .............. 70010-70017
-@     Article@10.7.@Official Reporters in Counties With a Population of @300@,000 to 310,000 ..............................  70025
+@     Article@10.@Official Reporters in Counties With a Population of 70,000 to 100,000 @69990@-69991
+@     Article@10.1.@Official Reporters in Counties with a Population of 750,000 to 1,070,000 @69992@-69992.2
+@     Article@10.2.@Official Reporters in Counties With a Population of 240,000 to 260,000 @69993@
+@     Article@10.3.@Official Reporters in Counties With a Population of 490,000 to 503,000 @69994@-69994.9
+@     Article@10.4.@Official Reporters and Fees in Counties With a Population of 375,000 to 400,000 @69995@-69999
+@     Article@10.5.@Official Reporters in Counties with a Population of 10,000 to 10,500 @70000@
+@     Article@10.6.@Official Reporters in Counties With a Population of 210,000 to 220,000 @70010@-70017
+@     Article@10.7.@Official Reporters in Counties With a Population of 300,000 to 310,000 @70025@
 @     Article@11.@Official Reporters and Fees in Particular Counties @70040@-70064
-@     Article@12.@Alternative Provisions for Official Reporter in Counties With a Population of @700@,000 and Under 750,000 ................................... 70100-70104
+@     Article@12.@Alternative Provisions for Official Reporter in Counties With a Population of 700,000 and Under 750,000 @70100@-70104
 @     Article@12.1.@Official Reporters in Tulare County @70110@-70113
-@     Article@12.5.@Official Reporters in Counties With a Population of @95@,000 and Under 120,000 ........ 70125-70128
-@     Article@12.7.@Official Reporters in Counties with a Population of @140@,000 to 147,000 .............. 70130-70134
-@     Article@12.8.@Official Reporters and Fees in Counties With a Population of @120@,000 to 130,000 .............. 70136-70139
+@     Article@12.5.@Official Reporters in Counties With a Population of 95,000 and Under 120,000  @70125@-70128
+@     Article@12.7.@Official Reporters in Counties with a Population of 140,000 to 147,000 @70130@-70134
+@     Article@12.8.@Official Reporters and Fees in Counties With a Population of 120,000 to 130,000 @70136@-70139
 @     Article@13.@Court Commissioners @70141.11@
 @    CHAPTER@5.1.@UNIFICATION OF MUNICIPAL AND SUPERIOR COURTS@@
 @     Article@1.@Unification Voting Procedure @70200@-70202

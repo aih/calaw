@@ -1,5 +1,5 @@
                     CALIFORNIA FOOD AND AGRICULTURAL CODE TABLE OF CONTENTS
-   GENERAL PROVISIONS AND DEFINITIONS ..................................   1-51
+@   GENERAL PROVISIONS AND DEFINITIONS @1@-51
 @   DIVISION@1.@STATE ADMINISTRATION@@
 @    PART@1.@THE DEPARTMENT OF FOOD AND AGRICULTURE@@
 @     CHAPTER@1.@ORGANIZATION @101@-105
@@ -76,14 +76,14 @@
 @     CHAPTER@5.@POWERS AND DUTIES GENERALLY @4051@-4060
 @     CHAPTER@6.@PROVISIONS REGARDING PARTICULAR ASSOCIATIONS@@
 @      Article@1.@California Science Center @4101@-4108
-      Article 2.  1-A District Agricultural Association ................   4131
-      Article 3.  22nd District Agricultural Association ............ 4155-4157
-      Article 3.5.  25th District Agricultural Association .......... 4161-4163
-      Article 3.8.  50th District Agricultural Association .............   4171
-      Article 4.  51st District Agricultural Association ...............   4182
+@      Article@2.@1-A District Agricultural Association @4131@
+@      Article@3.@22nd District Agricultural Association @4155@-4157
+@      Article@3.5.@25th District Agricultural Association @4161@-4163
+@      Article@3.8.@50th District Agricultural Association @4171@
+@      Article@4.@51st District Agricultural Association @4182@
 @      Article@5.@Associations Representing More Than One County @4191@-4192
-      Article 6.  54th District Agricultural Association ...............   4195
-      Article 7.  52nd District Agricultural Association and the California Exposition and State Fair .............. 4200-4210
+@      Article@6.@54th District Agricultural Association @4195@
+@      Article@7.@52nd District Agricultural Association and the California Exposition and State Fair @4200@-4210
 @     CHAPTER@7.@WAR MEMORIALS @4251@-4253
 @     CHAPTER@8.@SALE OF TICKETS ON ASSOCIATION PROPERTY @4301@
 @     CHAPTER@9.@STATE RACE TRACK LEASING COMMISSION @4351@-4363
@@ -356,7 +356,7 @@
 @    CHAPTER@3.@RESTRICTED MATERIALS@@
 @     Article@1.@Generally @14001@-14015
 @     Article@1.5.@Pesticides @14021@-14027
-     Article 2.  2,4-D and Other Herbicides ....................... 14031-14034
+@     Article@2.@2,4-D and Other Herbicides @14031@-14034
 @     Article@3.@Compound 1080@14061@-14063
 @     Article@4.@Methyl Bromide and Chloropicrin @14081@-14082
 @    CHAPTER@3.4.@PRIVATE APPLICATOR CERTIFICATION @14090@-14099.5
@@ -664,7 +664,7 @@
 @    CHAPTER@3.@SEEDLESS MANDARIN AND HONEYBEE COEXISTENCE WORKING GROUP ACT @29810@-29812
 @   DIVISION@14.@REGULATION AND LICENSING OF DOGS@@
 @    CHAPTER@1.@GENERAL PROVISIONS @30501@-30504
-@    CHAPTER@1.5.@SPECIAL PROVISIONS APPLICABLE TO COUNTIES WITH A POPULATION OF LESS THAN @100@,000 PERSONS ......... 30520-30525
+@    CHAPTER@1.5.@SPECIAL PROVISIONS APPLICABLE TO COUNTIES WITH A POPULATION OF LESS THAN 100,000 PERSONS @30520@-30525
 @    CHAPTER@2.@DISPOSITION OF FUNDS @30651@-30656
 @    CHAPTER@3.@DOG TAGS @30801@-30807
 @    CHAPTER@3.5.@GUIDE DOGS, SIGNAL DOGS,AND SERVICE DOGS @30850@-30854
@@ -683,7 +683,7 @@
 @     Article@5.@Miscellaneous @31681@-31683
 @   DIVISION@14.5.@REGULATION OF CATS@@
 @    CHAPTER@1.@REGULATION OF CATS GENERALLY @31751@-31754
-@    CHAPTER@2.@SPECIAL PROVISIONS APPLICABLE TO COUNTIES WITH A POPULATION OF LESS THAN @100@,000 PERSONS ........... 31760-31765
+@    CHAPTER@2.@SPECIAL PROVISIONS APPLICABLE TO COUNTIES WITH A POPULATION OF LESS THAN 100,000 PERSONS @31760@-31765
 @   DIVISION@14.8.@ANIMALS @32000@-32003
 @   DIVISION@15.@MILK AND MILK PRODUCTS ACT OF 1947@@
 @    PART@1.@GENERALLY@@
@@ -828,8 +828,7 @@
 @      Article@35.@Milk Products Made by Acidified Processes @38861@
 @      Article@36.@Kefir Milk--A Cultured Milk @38871@-38874
 @      Article@37.@Fruit Kefir--A Cultured Milk @38875@-38876
-@      Article@38.@Lactose Reduced Milk, Reduced-Fat Lactose Reduced Milk, Lactose Reduced Lowfat or Light Milk, and Lactose Reduced Nonfat, Skim, or Fat-Free@@
-                   Milk ................................................  38881
+@      Article@38.@Lactose Reduced Milk, Reduced-Fat Lactose Reduced Milk, Lactose Reduced Lowfat or Light Milk, and Lactose Reduced Nonfat, Skim, or Fat-Free Milk@38881@
 @      Article@39.@Fromage Frais or Soft Fresh Cheese @38885@-38888
 @      Article@40.@Bulky Flavored Fromage Frais or Bulky Flavored Soft Fresh Cheese @38891@-38892
 @      Article@41.@Lactose Reduced Dairy Products @38895.1@-38895.2

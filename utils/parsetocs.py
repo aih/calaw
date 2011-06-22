@@ -8,7 +8,7 @@
 #find ./toc_raw2/* | xargs ssed -R -i -e 's_@+_\n_g'
 
 # 2. Separate the fields
-#ssed -R -e "s_^(\s*\w+)\s((?:\d+\w?\.)+)\s+([A-Z][A-Za-z\-\;\:\,\' ]+(?:[12][019]\d{2})?)\s?(?:\.{2,})?\s*((?:\d+\.?)+)?_@\1@\2@\3@\4@_"
+#ssed -R -e "s_^(\s*\w+)\s(\[?(?:\d+\w?\.)+\]?)\s+([A-Z][A-Za-z\-\;\:\,\'\" ]+(?:[12][019]\d{2})?)\s?(?:\.{2,})?\s*((?:\d+\.?)+)?_@\1@\2@\3@\4@_"
 
 # Save titles and parents (Division, Part, Chapter, etc.) to db
 
@@ -23,44 +23,50 @@ def parsetocs(filepath):
     level_number = 0
     title = ''
     code_title = filepath.rsplit('/',1)[-1].split('_',1)[0] 
+    print "WORKING ON CODE " +  code_title
     current_levels = [ code_title + ' >> ']
     # Open file
     with open(filepath, 'r') as file:
         for each_line in file:
-            items = each_line.split('@')
-            print items
+            items = each_line.rstrip().split('@')
+            #print items
             if len(items)>1:
                     depth = len(items[1]) - len(items[1].lstrip())
                     level_name = items[1].strip()
                     level_number = items[2].strip()
                     title = items[3].strip()
-                    try:
-                        startpage = items[4].strip()
-                    except:
-                        pass
                     current_level = level_name+' '+level_number+' '+title+' >> '
+                    startpage = items[4].strip()
+                    if len(current_levels)>1:
+                        parents = reduce(lambda x, y: x+y, current_levels)
+                    else:
+                        parents = current_levels[0] 
+                    sfname = SectionFileName(name = current_level,parents = parents)
+                    #print sfname
+                    sfname.save()
+                    try:
+                        if len(startpage) > 1:                  
+                            sectionfile = SectionFile.objects.get(
+# Use 'filter' instead of 'get' because some sections are repeated in CA code online
+                                                                section=Section.objects.filter(secnumber = startpage+'.',
+                                                                                            code = Code.objects.get(name = code_title))[0]
+                                                              )
+                            #print sectionfile
+                            sectionfile.sectionfilename = sfname
+                            sectionfile.save()
+                    except:
+                        print 'PROBLEM assigning sectionfile.sectionfilename'
+                        pass
                     # Adjust for any change in hierarchy depth
                     if (depth < last_depth) | (depth == last_depth):
                         current_levels= current_levels[:(depth-last_depth-1)]
                     current_levels.append(current_level)
                     last_depth = depth
-                    print current_levels
-                    sfname = SectionFileName(
-                                                name = current_level,
-                                                parents = current_levels,
-                                                sectionfile = SectionFile.objects.get(
-                                                                                        section=Section.objects.get(
-                                                                                                                    secnumber = startpage,
-                                                                                                                    code = Code.objects.get(name = code_title)
-                                                                                                                    )
-                                                                                    )
-                                            )
-                    print sfname
-                    #sfname.save()                     
+                    #print current_levels
 def main():
     #Find makes a list of all files in the directory; ignoring files that start with '.'
     cmd = "find "+filespath+" ! -iname '.*' -print"
-    print cmd
+    #print cmd
     fileslist = Popen(cmd, shell=True, stdout=PIPE)
     for filepath in fileslist.stdout.readlines():
         filepath = filepath.strip()
