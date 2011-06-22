@@ -41,6 +41,11 @@ def target_to_section(request, codename, target_section):
             section_current = models.Section.objects.get(code = code_current, secnumber = target_section)
             #print section_current
             sectionfile = models.SectionFile.objects.get(section = section_current)
+            try:
+                parents = sectionfile.sectionfilename.parents
+                parents = parents.rsplit('>>',1)[0].split('>>',1)[1].strip()
+            except:
+                pass
             tree_section = html.document_fromstring(sectionfile.text)
             body = etree.tostring(bodysel(tree_section)[0], pretty_print=False, method='html') # selects the body element of the document
             return locals()
