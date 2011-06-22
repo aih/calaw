@@ -12,12 +12,12 @@
             &nbsp;&nbsp;>> &nbsp;&nbsp;
             <a class="" style="font-weight: bold" href="/laws/CODE-{{code_current}}">{{ code_fn }}</a>
             {% endif %}
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a class="{% navactive request 'search' %}" 
+               href="{% url search %}">Search</a>
             {% comment %}TODO: Default to hide the 'parents' titlebar, replace with a button; Slide out using JQueryUI{% endcomment %}
             {% if parents %}
             <br/> {{ parents }} <br/>
             {% endif %}
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a class="{% navactive request 'search' %}" 
-                href="{% url search %}">Search</a>
         </div>
         <div class="navbar-side navbar-right"></div>
     </div>
