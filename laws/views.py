@@ -48,6 +48,7 @@ def target_to_section(request, codename, target_section):
                 pass
             tree_section = html.document_fromstring(sectionfile.text)
             body = etree.tostring(bodysel(tree_section)[0], pretty_print=False, method='html') # selects the body element of the document
+            body = body.replace('CODE-this-', 'CODE-'+code_current.name+'-')
             return locals()
 
 def codes_index(request):
