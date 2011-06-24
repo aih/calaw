@@ -65,7 +65,7 @@ def code_toc(request, codename):
     tree_toc = html.document_fromstring(code_toc.read())
     code_toc.close()
     body = etree.tostring(bodysel(tree_toc)[0], pretty_print=False, method='html') # selects the body element of the document
-    #response = render_to_response(codename+'_toc.html', locals(), context_instance=RequestContext(request))
+    body = body.replace('CODE-this-', 'CODE-'+code_current.name+'-')
     return locals() 
 
 def my404(request):
