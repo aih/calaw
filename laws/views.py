@@ -37,7 +37,8 @@ def target_to_section(request, codename, target_section):
         else:
             code_current = models.Code.objects.get(name = codename)
             code_fn = code_current.fullname
-            target_section = target_section.rsplit('.',1)[0]+'.'
+            #target_section = target_section.rsplit('.',1)[0]+'.'
+            target_section = target_section.rstrip('.')+'.'
             section_current = models.Section.objects.filter(code = code_current, secnumber = target_section)[0]
             #print section_current
             sectionfile = models.SectionFile.objects.get(section = section_current)
