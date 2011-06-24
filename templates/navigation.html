@@ -14,16 +14,16 @@
             {% endif %}
            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a class="{% navactive request 'search' %}" 
                href="{% url search %}">Search</a>
-           {% comment %}TODO: Default to hide the 'parents' titlebar, replace with a button; Slide out using JQueryUI{% endcomment %}
-          <span class="toggle_link" style="font-size: 80%;">
-             <span class="hideable" id="Hide">&nbsp;&nbsp;&nbsp;&nbsp;Hide</span>
-             <span class="hideable" id="Show" style="display: none">&nbsp;&nbsp;&nbsp;&nbsp;Show</span>
- <a href="javascript:;" onclick="$('#parents').toggle();$('#Hide').toggle();$('#Show').toggle();" title="Show/Hide full title">></a>
-            </span>
- 
                 {% if parents %}
-                    <span class="hideable" id="parents">
-                    <br/> {{ parents }} <br/>
+                    <span class="toggle_link" style="font-size: 80%;">
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="hideable" id="Hide">Hide</span>
+                        <span class="hideable" id="Show" style="display: none">Show</span>
+                            <a href="javascript:;" onclick="$('#parents').toggle();$('#Hide').toggle();$('#Show').toggle();" title="Show/Hide full title">></a>
+                        </span>
+                        <span class="hideable" id="parents">
+                            <br/> {{ parents }} <br/>
+                        </span>
                     </span>
                 {% endif %}
                         
