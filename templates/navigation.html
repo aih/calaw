@@ -17,12 +17,12 @@
                 {% if parents %}
                     <span class="toggle_link" style="font-size: 80%;">
                         &nbsp;&nbsp;&nbsp;&nbsp;
-                        <span class="hideable" id="Hide">Hide</span>
-                        <span class="hideable" id="Show" style="display: none">Show</span>
-                            <a href="javascript:;" onclick="$('#parents').toggle();$('#Hide').toggle();$('#Show').toggle();" title="Show/Hide full title">></a>
-                        </span>
+                        <a href="javascript:;" onclick="$('#parents').toggle();$('#Hide').toggle();$('#Show').toggle();" title="Show/Hide full title">
+                                <span class="hideable" id="Hide">Hide</span>
+                                <span class="hideable" id="Show" style="display: none">Show</span>
+                        -></a>
                         <span class="hideable" id="parents">
-                            <br/> {{ parents }} <br/>
+                             <br/> {{ parents }} <br/>
                         </span>
                     </span>
                 {% endif %}
