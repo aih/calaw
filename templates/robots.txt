@@ -1,3 +1,0 @@
-# robots.txt for calaw.tabulaw.com
-User-agent: *
-Disallow: /laws/target/
