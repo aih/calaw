@@ -12,15 +12,13 @@
                 &nbsp;&nbsp;>> &nbsp;&nbsp;
                 <a class="" style="font-weight: bold" href="/laws/CODE-{{code_current}}">{{ code_fn }}</a>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                <a class="{% navactive request 'search' %}" href="{% url search %}">Search</a>
+                <a href="{% url search %}" class="{% navactive request 'search' %}">Search</a>
             {% endif %}
                 {% if parents %}
                     <span class="toggle_link" style="font-size: 80%;">
                         &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="javascript:;" onclick="$('#parents').toggle();$('#Hide').toggle();$('#Show').toggle();" title="Show/Hide full title">
-                                <span class="hideable" id="Hide">Hide</span>
-                                <span class="hideable" id="Show" style="display: none">Show</span>
-                        -></a>
+                        <button onclick="$('#parents').toggle();$('#Hide').toggle();$('#Show').toggle();" style="background: #D3D3D3; font-size: 110%; -webkit-appearance: none;" id='Hide'>Hide Full Title</button>
+                        <button onclick="$('#parents').toggle();$('#Hide').toggle();$('#Show').toggle(); "style="background: #D3D3D3; font-size: 110%; display: none; -webkit-appearance: none;" id='Show'>Show Full Title</button>
                         <span class="hideable" id="parents">
                              <br/> {{ parents }} <br/>
                         </span>
