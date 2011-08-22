@@ -13,15 +13,17 @@ I will be adding more detailed instructions on installation and use to this READ
 
 Search is powered by Sphinx, using a branch of [django-sphinx](https://github.com/xobb1t/django-sphinx/) with an option (sphinx_only) that decouples Sphinx from the database. The Sphinx index was built from a PostgreSQL version of the project database.
 To make Sphinx queries for index "calaw1": (from command line) 
-$ search -c /path/to/sphinx_calaw.conf -i calaw1
+`$ search -c /path/to/sphinx_calaw.conf -i calaw1`
 
 To run the searchd daemon:
-sudo nohup searchd --config /usr/local/etc/sphinx_calaw.conf --index calaw1 &
+
+`sudo nohup searchd --config /usr/local/etc/sphinx_calaw.conf --index calaw1 &`
+
 -------------
 Dependencies:
 
 ####In Production:
-easy_install django-static
+`easy_install django-static`
 
 Follow these instructions for serving static files:
 
