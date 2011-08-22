@@ -21,9 +21,14 @@ To run the searchd daemon:
 
 -------------
 Installing Packages and Dependencies:
-`sudo apt-get install python-setuptools;
+`sudo apt-get install build-essential;
+sudo apt-get install python2.6-dev python-setuptools libxml2-dev libxslt-dev;
+sudo apt-get install sphinxsearch;
 sudo easy_install pip;
 sudo pip install django;
+sudo pip install django-sphinx;
+_Change the PORT settings in django-sphinx from 3312 to 9312, the new default for SPHINX.
+sudo pip install lxml;
 sudo apt-get install nginx python-flup;
 
 ####In Production:
