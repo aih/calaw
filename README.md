@@ -20,7 +20,11 @@ To run the searchd daemon:
 `sudo nohup searchd --config /usr/local/etc/sphinx_calaw.conf --index calaw1 &`
 
 -------------
-Dependencies:
+Installing Packages and Dependencies:
+`sudo apt-get install python-setuptools;
+sudo easy_install pip;
+sudo pip install django;
+sudo apt-get install nginx python-flup;
 
 ####In Production:
 `easy_install django-static`
