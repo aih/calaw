@@ -32,6 +32,6 @@ http://www.peterbe.com/plog/serve-your-static-stuff-in-django-with-nginx
 -----
 Hosting on AWS EC2:
 
-The site is currently hosted on an Ubuntu image on AWS EC2 (ami-e94e1cac from [Alestic list of instances](http://alestic.com/))
+The site is currently hosted on an Ubuntu image on AWS EC2 (ami-97c694d2 from [Alestic list of instances](http://alestic.com/))
 
 Using the Nginx webserver, following [these instructions](http://wiki.nginx.org/PythonFlup)
