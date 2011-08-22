@@ -22,11 +22,14 @@ Dependencies:
 
 ####In Production:
 easy_install django-static
+
 Follow these instructions for serving static files:
+
 http://www.peterbe.com/plog/serve-your-static-stuff-in-django-with-nginx
 
 -----
 Hosting on AWS EC2:
 
 The site is currently hosted on an Ubuntu image on AWS EC2 (ami-e94e1cac from [Alestic list of instances](http://alestic.com/))
+
 Using the Nginx webserver, following [these instructions](http://wiki.nginx.org/PythonFlup)
