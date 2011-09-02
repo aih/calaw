@@ -15,7 +15,6 @@ I will be adding more detailed instructions on installation and use to this READ
 
 `sudo apt-get install build-essential;
 sudo apt-get install python2.6-dev python-setuptools libxml2-dev libxslt-dev;
-sudo apt-get install sphinxsearch;
 sudo easy_install pip;
 sudo pip install django;
 sudo pip install django-sphinx;`
@@ -27,7 +26,11 @@ sudo apt-get install nginx python-flup;`
 
 ####Search Set-up####
 
-Search is powered by Sphinx, using a branch of [django-sphinx](https://github.com/xobb1t/django-sphinx/) with an option (sphinx_only) that decouples Sphinx from the database. The Sphinx index was built from a PostgreSQL version of the project database.
+Search is powered by Sphinx, using a branch of [django-sphinx](https://github.com/xobb1t/django-sphinx/) with an option (`sphinx_only`) that decouples Sphinx from the database. The Sphinx index was built from a PostgreSQL version of the project database.
+
+ There is an Ubuntu package, but it is too outdated for many of the useful configuration options.  So, to install Sphinx from sources:
+
+
 To make Sphinx queries for index "calaw1": (from command line) 
 `$ search -c /path/to/sphinx_calaw.conf -i calaw1`
 

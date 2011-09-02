@@ -12,23 +12,32 @@
 import os, sys, re, subprocess
 from subprocess import PIPE, Popen
 from subdir import subfile
-from MakeRList import makeRList
 from loaddb import *
 
-def main():
-    # Compiles regex substitutions
-    regfile = './sectionlist.txt'
+# Settings
+regfile = os.path.abspath(os.path.dirname(__file__))+'/sectionlist.txt'
+
+#Folder that holds the legislation files
+path = os.getcwd() +"/calawcode/media/cacode2"
+#TODO: do not include files that start with '.'
+fileslist = os.listdir(path)
+
+def makeRList(file):
+    a = open(file,'rb')
+    rlist = []
+    for eachline in a:
+        b = eachline.strip().split('@')
+        c = tuple(b)
+        rlist.append(c)
+    a.close()
+    return rlist
+
+def rcompile(regfile):
     rlist = makeRList(regfile)
     findreplace = [(re.compile(pattrn,re.U|re.M), replacement) for pattrn, replacement in rlist]
-    
-    
-    #TODO: Remember to replace filespath with the folder that holds the legislation files
-    filespath = "/Users/tabulaw/Documents/workspace/calawcode/media/cacode2"
-    #Seed codeinput with first Code name.  This should not be strictly necessary.
-    codeinput = "bpc"
-    #Find makes a list of all files in the directory; ignoring files that start with '.'
-    cmd = "find "+filespath+" ! -iname '.*' -print"
-    fileslist = Popen(cmd, shell=True, stdout=PIPE)
+    return findreplace
+
+def main(path, fileslist):
     for file in fileslist.stdout.readlines():
         file = file.strip()
         #remove the path, leaving only the file name
@@ -43,17 +52,11 @@ def main():
             parsedfile = parsedfile.communicate()
             parsedfile = parsedfile[0]
     
-            # Further parses the output, with the Regex patterns in findreplace and writes the parsed data to a file
+            # Further parses the output, with the Regex patterns in findreplace and saves the parsed data to a db
             parsedfile = subfile(parsedfile, findreplace)
             # Use loaddb functions to save the sections in parsedfile to the db  
             saveSectionData(codeinput, filename, parsedfile)
     
-        # Save the parsed file to file.html
-        #    file = filename + ".html"
-            print ' saving to db:', file
-        #    print ' writing:', file
-        #    with open("./"+file,'w') as f:
-        #        f.write(parsedfile)
         elif len(filename)<5:
             codeinput = filename
     
