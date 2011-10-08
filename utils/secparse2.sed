@@ -1,5 +1,5 @@
 #Add hyperlinks to each reference to one of the 29 CA Codes
-# Todo: This does not work over a newline (\n)
+# Todo: This does not always work over a newline (\n)
 {
 /Code of/ {N; s/Code\sof\sCivil\sProcedure/<a href="\/laws\/target\/Code-ccp">Code of Civil Procedure<\/a>/sg;}
 s/Business\sand\sProfessions\sCode/<a href="\/laws\/target\/Code-bpc">Business and Professions Code<\/a>/Sg;

@@ -1,5 +1,6 @@
-(Sections?\s)([0-9.]+)(\)?,?\s)(.*?)(of\s?the\s.*Code-([a-z]{3,4}))@\1<a href="/laws/target/CODE-\6-\2">\2</a>\3\4\5
-(Section\s)([0-9.]+)(\sof\sthis\scode)@\1<a href="/laws/target/CODE-this-\2">\2</a>\3
-(Section\s[0-9.]+\sor\s)([0-9.]+)@\1<a href="/laws/target/CODE-this-\2">\2</a>
-(Sections\s[0-9.]+\sand\s)([0-9.]+)(?!(?:\sof))@\1<a href="/laws/target/CODE-this-\2">\2</a>
-(Sections?\s)([0-9.]+)(\)?\,?\s)(?!(?:[\S\s]{1,200}(?:Constitution|Article|Code|Act)))@\1<a href="/laws/target/CODE-this-\2">\2</a>\3
+(Sections\s)(([0-9.]*[0-9],\s)+and\s([0-9.]*[0-9]))@\1<!--multiplesection-->\2<!--multiplesection-->
+(Section\s)([0-9.]*[0-9])(\)?,?\s)(.*?)(of\s?the\s.*Code-([a-z]{3,4}))@\1<a href="/laws/target/CODE-\6-\2">\2</a>\3\4\5
+(Section\s)([0-9.]*[0-9])(\sof\sthis\scode)@\1<a href="/laws/target/CODE-this-\2">\2</a>\3
+(Section\s[0-9.]*[0-9]\sor\s)([0-9.]*[0-9])@\1<a href="/laws/target/CODE-this-\2">\2</a>
+(Sections\s[0-9.]*[0-9]+\sand\s)([0-9.]*[0-9])(?!(?:\sof))@\1<a href="/laws/target/CODE-this-\2">\2</a>
+(Sections?\s)([0-9.]*[0-9])(\:?\.?\)?\,?)(?!(?:[\S\s]{1,200}(?:Constitution|Code|Act)))@\1<a href="/laws/target/CODE-this-\2">\2</a>\3
