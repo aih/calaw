@@ -127,21 +127,25 @@ def main(pathin = pathin, regfile = regfile):
     codes = [dir for dir in os.listdir(pathin) if dir[0] is not '.']
     for codename in codes:
         print 'Parsing: ' + codename
-        with open(pathin+codename+'-combined', 'wb') as codefile:
-            fileslist = unix_find(pathin+codename+'/')
-            for filepath in fileslist:
-                codeandfile = filepath.split(pathin)[1]
+        codestring = ''
+        fileslist = unix_find(pathin+codename+'/')
+        for filepath in fileslist:
+            codeandfile = filepath.split(pathin)[1]
 
-                try:
-                    # print "PARSING: " + codeandfile 
-                    parsedfile = parsefile(filepath, findreplace)
-                except:
-                    print "Trouble parsing the file: " + codeandfile
+            try:
+                # print "PARSING: " + codeandfile 
+                parsedfile = parsefile(filepath, findreplace)
+            except:
+                print "Trouble parsing the file: " + codeandfile
                 
-                try:
-                    codefile.write('<!-- '+ codeandfile+'-->\n'+parsedfile)
-                except:
-                    print "Trouble writing to the file object."
+            try:
+                codestring+='<!-- '+ codeandfile+'-->\n'+parsedfile
+            except:
+                print "Trouble adding to the string."
+        
+        with open(pathin+codename+'-combined', 'wb') as codefile:
+            print 'Writing to: ' +pathin+codename+'-combined'
+            codefile.write(codestring)
 
         # Use loaddb functions to save the sections in parsedfile to the db  
         # saveSectionData(codename, filename, parsedfile)
